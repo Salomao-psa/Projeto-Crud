@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-//esse arquivo abaixo
+
 const methodOverride = require('method-override')
 const {flash} = require('express-flash-message')
 const session = require('express-session');
@@ -17,7 +17,7 @@ connectDB()
 //CONFIG-Express json
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-// VEJA QUE TEMOS _METHOD PRESENTES NA NOSSAS VIEWS PARA EDIÇÃO
+
 app.use(methodOverride('_method'));
 
 //Static files
